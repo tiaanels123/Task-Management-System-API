@@ -8,6 +8,9 @@ using TaskModel = TaskManagementSystem.Api.Models.Task;
 
 namespace TaskManagementSystem.Api.Controllers
 {
+    /// <summary>
+    /// Handles operations related to tasks.
+    /// </summary>
     [Authorize]
     [ApiController]
     [Route("api/[controller]")]
@@ -22,7 +25,9 @@ namespace TaskManagementSystem.Api.Controllers
             _logger = logger;
         }
 
-        // Endpoint to get all tasks
+        /// <summary>
+        /// Endpoint to get all tasks.
+        /// </summary>
         [HttpGet]
         public async Task<IActionResult> GetAllTasks()
         {
@@ -31,7 +36,10 @@ namespace TaskManagementSystem.Api.Controllers
             return Ok(tasks);
         }
 
-        // Endpoint to get a task by ID
+        /// <summary>
+        /// Endpoint to get a task by ID.
+        /// </summary>
+        /// <param name="id">The task ID.</param>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTaskById(int id)
         {
@@ -45,7 +53,10 @@ namespace TaskManagementSystem.Api.Controllers
             return Ok(task);
         }
 
-        // Endpoint to create a new task
+        /// <summary>
+        /// Endpoint to create a new task.
+        /// </summary>
+        /// <param name="taskDto">The task data transfer object.</param>
         [HttpPost]
         public async Task<IActionResult> CreateTask([FromBody] TaskDto taskDto)
         {
@@ -69,7 +80,11 @@ namespace TaskManagementSystem.Api.Controllers
             return CreatedAtAction(nameof(GetTaskById), new { id = createdTask.Id }, createdTask);
         }
 
-        // Endpoint to update an existing task
+        /// <summary>
+        /// Endpoint to update an existing task.
+        /// </summary>
+        /// <param name="id">The task ID.</param>
+        /// <param name="taskDto">The task data transfer object.</param>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTask(int id, [FromBody] TaskDto taskDto)
         {
@@ -94,7 +109,10 @@ namespace TaskManagementSystem.Api.Controllers
             return NoContent();
         }
 
-        // Endpoint to delete a task by ID
+        /// <summary>
+        /// Endpoint to delete a task by ID.
+        /// </summary>
+        /// <param name="id">The task ID.</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTask(int id)
         {

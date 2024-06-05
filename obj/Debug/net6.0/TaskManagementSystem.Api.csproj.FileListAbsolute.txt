@@ -166,3 +166,5 @@ C:\my-projects\Task-Management-System\Task-Management-System-API\obj\Debug\net6.
 C:\my-projects\Task-Management-System\Task-Management-System-API\obj\Debug\net6.0\TaskManagementSystem.Api.pdb
 C:\my-projects\Task-Management-System\Task-Management-System-API\obj\Debug\net6.0\TaskManagementSystem.Api.genruntimeconfig.cache
 C:\my-projects\Task-Management-System\Task-Management-System-API\obj\Debug\net6.0\ref\TaskManagementSystem.Api.dll
+C:\my-projects\Task-Management-System\Task-Management-System-API\bin\Debug\net6.0\TaskManagementSystem.Api.xml
+C:\my-projects\Task-Management-System\Task-Management-System-API\obj\Debug\net6.0\TaskManagementSystem.Api.xml

@@ -10,6 +10,9 @@ using TaskManagementSystem.Api.Services;
 
 namespace TaskManagementSystem.Api.Controllers
 {
+    /// <summary>
+    /// Handles operations related to users.
+    /// </summary>
     [Authorize]
     [ApiController]
     [Route("api/[controller]")]
@@ -26,7 +29,9 @@ namespace TaskManagementSystem.Api.Controllers
             _logger = logger;
         }
 
-        // Endpoint to get the authenticated user's info
+        /// <summary>
+        /// Endpoint to get the authenticated user's info.
+        /// </summary>
         [HttpGet("me")]
         public async Task<IActionResult> GetUserInfo()
         {
@@ -46,7 +51,10 @@ namespace TaskManagementSystem.Api.Controllers
             return Ok(userInfo);
         }
 
-        // Endpoint to update the authenticated user's info
+        /// <summary>
+        /// Endpoint to update the authenticated user's info.
+        /// </summary>
+        /// <param name="userDto">The user data transfer object.</param>
         [HttpPut("me")]
         public async Task<IActionResult> UpdateUserInfo([FromBody] UserDto userDto)
         {

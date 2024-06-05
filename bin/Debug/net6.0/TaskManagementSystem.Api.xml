@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaskManagementSystem.Api</name>
+    </assembly>
+    <members>
+        <member name="T:TaskManagementSystem.Api.Controllers.AuthController">
+            <summary>
+            Handles user authentication and registration.
+            </summary>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.AuthController.Register(TaskManagementSystem.Api.Models.RegisterModel)">
+            <summary>
+            Endpoint for user registration.
+            </summary>
+            <param name="model">The user registration model.</param>
+            <returns>Action result.</returns>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.AuthController.Login(TaskManagementSystem.Api.Models.LoginModel)">
+            <summary>
+            Endpoint for user login.
+            </summary>
+            <param name="model">The user login model.</param>
+            <returns>Action result.</returns>
+        </member>
+        <member name="T:TaskManagementSystem.Api.Controllers.TasksController">
+            <summary>
+            Handles operations related to tasks.
+            </summary>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.TasksController.GetAllTasks">
+            <summary>
+            Endpoint to get all tasks.
+            </summary>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.TasksController.GetTaskById(System.Int32)">
+            <summary>
+            Endpoint to get a task by ID.
+            </summary>
+            <param name="id">The task ID.</param>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.TasksController.CreateTask(TaskManagementSystem.Api.DTOs.TaskDto)">
+            <summary>
+            Endpoint to create a new task.
+            </summary>
+            <param name="taskDto">The task data transfer object.</param>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.TasksController.UpdateTask(System.Int32,TaskManagementSystem.Api.DTOs.TaskDto)">
+            <summary>
+            Endpoint to update an existing task.
+            </summary>
+            <param name="id">The task ID.</param>
+            <param name="taskDto">The task data transfer object.</param>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.TasksController.DeleteTask(System.Int32)">
+            <summary>
+            Endpoint to delete a task by ID.
+            </summary>
+            <param name="id">The task ID.</param>
+        </member>
+        <member name="T:TaskManagementSystem.Api.Controllers.UsersController">
+            <summary>
+            Handles operations related to users.
+            </summary>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.UsersController.GetUserInfo">
+            <summary>
+            Endpoint to get the authenticated user's info.
+            </summary>
+        </member>
+        <member name="M:TaskManagementSystem.Api.Controllers.UsersController.UpdateUserInfo(TaskManagementSystem.Api.DTOs.UserDto)">
+            <summary>
+            Endpoint to update the authenticated user's info.
+            </summary>
+            <param name="userDto">The user data transfer object.</param>
+        </member>
+        <member name="T:TaskManagementSystem.Api.DTOs.TaskDto">
+            <summary>
+            DTO for task data transfer.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.TaskDto.Id">
+            <summary>
+            The ID of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.TaskDto.Title">
+            <summary>
+            The title of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.TaskDto.Description">
+            <summary>
+            A brief description of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.TaskDto.Status">
+            <summary>
+            The current status of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.TaskDto.UserId">
+            <summary>
+            The ID of the user assigned to the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.TaskDto.User">
+            <summary>
+            The user assigned to the task.
+            </summary>
+        </member>
+        <member name="T:TaskManagementSystem.Api.DTOs.UserDto">
+            <summary>
+            DTO for user data transfer.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.UserDto.Id">
+            <summary>
+            The ID of the user.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.UserDto.UserName">
+            <summary>
+            The username of the user.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.UserDto.Email">
+            <summary>
+            The email of the user.
+            </summary>
+        </member>
+        <member name="T:TaskManagementSystem.Api.DTOs.UserUpdateDto">
+            <summary>
+            DTO for updating user data transfer.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.UserUpdateDto.UserName">
+            <summary>
+            The new username of the user.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.DTOs.UserUpdateDto.Email">
+            <summary>
+            The new email of the user.
+            </summary>
+        </member>
+        <member name="T:TaskManagementSystem.Api.Models.LoginModel">
+            <summary>
+            Model for user login.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.LoginModel.Username">
+            <summary>
+            The username of the user.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.LoginModel.Password">
+            <summary>
+            The password of the user.
+            </summary>
+        </member>
+        <member name="T:TaskManagementSystem.Api.Models.RegisterModel">
+            <summary>
+            Model for user registration.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.RegisterModel.Username">
+            <summary>
+            The username of the user.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.RegisterModel.Email">
+            <summary>
+            The email of the user.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.RegisterModel.Password">
+            <summary>
+            The password of the user.
+            </summary>
+        </member>
+        <member name="T:TaskManagementSystem.Api.Models.Task">
+            <summary>
+            Model for task entity.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.Task.Id">
+            <summary>
+            The ID of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.Task.Title">
+            <summary>
+            The title of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.Task.Description">
+            <summary>
+            A brief description of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.Task.Status">
+            <summary>
+            The current status of the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.Task.UserId">
+            <summary>
+            The ID of the user assigned to the task.
+            </summary>
+        </member>
+        <member name="P:TaskManagementSystem.Api.Models.Task.User">
+            <summary>
+            The user assigned to the task.
+            </summary>
+        </member>
+        <member name="T:TaskManagementSystem.Api.Models.User">
+            <summary>
+            Model for user entity.
+            </summary>
+        </member>
+    </members>
+</doc>

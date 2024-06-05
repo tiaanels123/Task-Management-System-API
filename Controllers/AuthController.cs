@@ -12,6 +12,9 @@ using TaskManagementSystem.Api.Models;
 
 namespace TaskManagementSystem.Api.Controllers
 {
+    /// <summary>
+    /// Handles user authentication and registration.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -29,7 +32,11 @@ namespace TaskManagementSystem.Api.Controllers
             _logger = logger;
         }
 
-        // Endpoint for user registration
+        /// <summary>
+        /// Endpoint for user registration.
+        /// </summary>
+        /// <param name="model">The user registration model.</param>
+        /// <returns>Action result.</returns>
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel model)
         {
@@ -56,7 +63,11 @@ namespace TaskManagementSystem.Api.Controllers
             return BadRequest(ModelState);
         }
 
-        // Endpoint for user login
+        /// <summary>
+        /// Endpoint for user login.
+        /// </summary>
+        /// <param name="model">The user login model.</param>
+        /// <returns>Action result.</returns>
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
