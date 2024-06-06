@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 using System.Text;
 using TaskManagementSystem.Api.Config;
@@ -100,6 +99,19 @@ public class Program
             });
         });
 
+        // Add CORS policy
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowLocalhost3000",
+                policyBuilder =>
+                {
+                    policyBuilder.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+        });
+
         var app = builder.Build();
 
         // Use exception handling middleware.
@@ -116,7 +128,10 @@ public class Program
             });
         }
 
-        app.UseHttpsRedirection();
+        // Enable CORS
+        app.UseCors("AllowLocalhost3000");
+
+        // app.UseHttpsRedirection();
 
         app.UseAuthentication();
         app.UseAuthorization();
