@@ -63,7 +63,7 @@ Task-Management-System-API/
 
 ### Access Swagger UI
    
-Open your browser and navigate to https://localhost:5001/swagger to explore the API endpoints.
+Open your browser and navigate to http://localhost:5249/swagger to explore the API endpoints.
 
 ## Testing
 
@@ -85,7 +85,7 @@ Run integration tests with the following command:
 
 ## API Endpoints
 
-The API exposes various endpoints for managing tasks and users. Refer to the Swagger UI at https://localhost:5001/swagger for detailed documentation and testing of endpoints.
+The API exposes various endpoints for managing tasks and users. Refer to the Swagger UI at http://localhost:5249/swagger for detailed documentation and testing of endpoints.
 
 
 
